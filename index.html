@@ -36,10 +36,10 @@
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Обо мне</a>
+                            <a class="nav__link" href="text.html">Обо мне</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Реклама</a>
+                            <a class="nav__link" href="text.html">Реклама</a>
                         </li>
                     </ul>
                 </nav>
@@ -49,11 +49,14 @@
                 <nav class="nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Профиль</a>
+                            <a class="nav__link" href="profile.html">Профиль</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="signin.html">Выйти</a>
                         </li>
                     </ul>
                 </nav>
-                <form class="search" action="/" method="post">
+                <form class="search" action="search.html" method="get">
                     <input class="search__input" type="text" placeholder="Поиск по блогу">
                 </form>
             </div>
@@ -98,7 +101,7 @@
             </div>
             <!--/.sidebar__content-->
             <div class="sidebar__footer">
-                <a class="btn btn--red" href="#">Мои работы</a>
+                <a class="btn btn--red" href="works.html">Мои работы</a>
                 <button class="btn btn--blue" type="button">Написать мне</button>
             </div>
         </aside>
@@ -202,7 +205,7 @@
                 <article class="post">
                     <div class="post__header post__header--preview">
                         <div class="embed">
-                            <iframe src="video/video.mp4" frameborder="0"></iframe>
+                            <video src="video/video.mp4" autoplay muted></video>
                         </div>
 
                     </div>
@@ -283,6 +286,97 @@
         </main>
     </div>
 
+    <!--Contact-modal-->
+
+    <!-- <div class="modal">
+        <div class="modal__content modal__content--contact">
+            <button class="modal__close" type="button">
+                <img src="img/close.svg" alt="Close">
+            </button>
+
+            <form class="form" action="/" method="post">
+
+                <div class="form__group form__group--md">
+                    <input class="form__control" type="text" placeholder="Ваше имя">
+                    <span class="form__line"></span>
+                </div>
+
+                <div class="form__group form__group--md">
+                    <input class="form__control" type="email" placeholder="Ваш e-mail">
+                    <span class="form__line"></span>
+                </div>
+
+                <div class="form__group form__group--md">
+                    <textarea class="form__control form__control--textarea" placeholder="Текст сообщения"></textarea>
+                    <span class="form__line"></span>
+                </div>
+
+                <div class="form__footer">
+                    <div class="form__group form__group--md">
+                        <button class="btn btn--blue btn--rounded btn--sm" type="submit">Отправить</button>
+                    </div>
+
+                </div>
+            </form>
+
+            <ul class="modal__footer">
+                <li>
+                    e-mail:
+                    <a href="mailto:info@mywebsite.ru">info@mywebsite.ru</a>
+                </li>
+                <li>
+                    тел: <a href="te:+94323285622">+943-232-856-22</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div> -->
+
+    <!--Share-modal-->
+
+    <!-- <div class="modal">
+        <div class="modal__content">
+            <button class="modal__close" type="button">
+                <img src="img/close.svg" alt="Close">
+            </button>
+
+            <ul class="social">
+
+                <li class="social__item">
+                    <a class="social__link" target="blank" href="#">
+                        <img src="img/share/facebook.svg" alt="facebook">
+                    </a>
+                </li>
+
+                <li class="social__item">
+                    <a class="social__link" target="blank" href="#">
+                        <img src="img/share/twitter.svg" alt="twitter">
+                    </a>
+                </li>
+
+                <li class="social__item">
+                    <a class="social__link" target="blank" href="#">
+                        <img src="img/share/vk.svg" alt="vk">
+                    </a>
+                </li>
+
+                <li class="social__item">
+                    <a class="social__link" target="blank" href="#">
+                        <img src="img/share/copy.svg" alt="copy">
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div> -->
+
+    <!--Video-modal-->
+
+    <!-- <div class="modal">
+        <video class="modal__video" src="" poster="https://place-hold.it/420x580"></video>
+    </div> -->
 
     <!-- JS -->
     <script src="js/script.js"></script>
