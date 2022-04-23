@@ -11,7 +11,7 @@
 
 <body>
 
-    <div class="page">
+    <div class="page" id="page">
 
         <!--HEADER-->
         <header class="header">
@@ -45,7 +45,7 @@
                     </ul>
                 </nav>
 
-                <button class="burger" type="button">
+                <button class="burger" type="button" id="sidebarToggle">
                     <span></span>
                 </button>
             </div>
@@ -67,7 +67,7 @@
             </div>
         </header>
         <!--SIDEBAR-->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="sidebar__header">
                 <img src="img/sidebar-header.jpg" alt="">
             </div>
@@ -133,10 +133,10 @@
                             <a class="nav__link" href="text.html">Реклама</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="text.html">Профиль</a>
+                            <a class="nav__link" href="profile.html">Профиль</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="text.html">Выйти</a>
+                            <a class="nav__link" href="signin.html">Выйти</a>
                         </li>
                     </ul>
                 </nav>
@@ -145,7 +145,7 @@
             <!--/.sidebar__content-->
             <div class="sidebar__footer">
                 <a class="btn btn--red" href="works.html">Мои работы</a>
-                <button class="btn btn--blue" type="button">Написать мне</button>
+                <button class="btn btn--blue" type="button" data-modal="contact-modal">Написать мне</button>
             </div>
         </aside>
 
@@ -153,7 +153,7 @@
             <div class="container">
                 <!--STORIES-->
                 <div class="stories">
-                    <div class="stories__item">
+                    <div class="stories__item" data-modal="story-modal">
                         <img class="stories__preview" src="img/stories/stories-img1.jpg" alt="">
                         <div class="stories__title">Отдыхаю на природе</div>
                         <time class="stories__date" datetime="2020-09-21">21.09.2020</time>
@@ -181,8 +181,8 @@
                 <!--ADD POST-->
                 <div class="add-post">
                     <form class="add-post__form" action="/" method="post">
-                        <textarea class="add-post__textarea" name="post-text"
-                            placeholder="Напишите что-нибудь"></textarea>
+                        <textarea class="add-post__textarea" name="post-text" placeholder="Напишите что-нибудь"
+                            data-autoresize></textarea>
                         <div class="add-post__form-actions">
                             <label class="add-post__file" for="add-post-file">
                                 <input type="file" id="add-post-file">
@@ -331,7 +331,7 @@
 
     <!--Contact-modal-->
 
-    <!-- <div class="modal">
+    <div class="modal" id="contact-modal">
         <div class="modal__content modal__content--contact">
             <button class="modal__close" type="button">
                 <img src="img/close.svg" alt="Close">
@@ -374,11 +374,11 @@
             </ul>
 
         </div>
-    </div> -->
+    </div>
 
     <!--Share-modal-->
 
-    <!-- <div class="modal">
+    <div class="modal">
         <div class="modal__content">
             <button class="modal__close" type="button">
                 <img src="img/close.svg" alt="Close">
@@ -413,13 +413,15 @@
             </ul>
 
         </div>
-    </div> -->
+    </div>
 
     <!--Video-modal-->
 
-    <!-- <div class="modal">
-        <video class="modal__video" src="" poster="https://place-hold.it/420x580"></video>
-    </div> -->
+    <div class="modal" id="story-modal">
+        <div class="modal__content modal__content--story">
+            <video class="modal__video" src="" poster="https://place-hold.it/420x580"></video>
+        </div>
+    </div>
 
     <!-- JS -->
     <script src="js/script.js"></script>

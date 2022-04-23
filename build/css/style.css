@@ -377,8 +377,23 @@ body {
   line-height: 1.5;
   color: #fff;
 }
-body.no-scroll, body.show-sidebar {
+body.no-scroll {
   overflow: hidden;
+}
+@media (max-width: 991px) {
+  body.show-sidebar {
+    overflow: hidden;
+  }
+}
+
+*::selection {
+  color: pink;
+  background-color: transparent;
+}
+
+*::-moz-selection {
+  color: pink;
+  background-color: transparent;
 }
 
 *,
@@ -407,17 +422,6 @@ a:hover {
   .show-sidebar .page {
     position: relative;
   }
-  .show-sidebar .page:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-  }
 }
 
 .page__title {
@@ -427,6 +431,19 @@ a:hover {
 }
 .page__title--center {
   text-align: center;
+}
+
+@media (max-width: 991px) {
+  .page__mask {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
 }
 
 .header {
@@ -573,7 +590,7 @@ a:hover {
   display: none;
   margin: 3rem 0;
 }
-@media (max-width: 575px) {
+@media (max-width: 991px) {
   .nav--mobile {
     display: block;
   }
@@ -961,13 +978,13 @@ a:hover {
 
 .add-post__form {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .add-post__textarea {
   display: block;
   flex-grow: 1;
-  height: 26px;
+  height: 34px;
   border: none;
   background: transparent;
   resize: none;
@@ -1611,7 +1628,7 @@ a:hover {
 }
 
 .modal {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1624,6 +1641,9 @@ a:hover {
   left: 0;
   z-index: 1010;
 }
+.modal.show {
+  display: flex;
+}
 
 .modal__content {
   position: relative;
@@ -1632,9 +1652,21 @@ a:hover {
   padding: 8rem;
   background-color: #202020;
   border-radius: 5px;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: transform 0.2s linear, opacity 0.2s linear;
+}
+@media (max-width: 991px) {
+  .modal__content {
+    padding: 5rem 3rem 3rem;
+  }
 }
 .modal__content--contact {
   padding-bottom: 2.5rem;
+}
+.modal__content--story {
+  padding: 0;
+  background: none;
 }
 
 .modal__close {
@@ -1669,4 +1701,9 @@ a:hover {
 }
 .modal__footer a:hover {
   text-decoration: none;
+}
+
+.modal__video {
+  display: block;
+  margin: 0 auto;
 }
